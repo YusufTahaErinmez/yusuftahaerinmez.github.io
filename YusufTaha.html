@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yusuf Taha Erinmez | Kişisel Sayfa</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f3e7b3;
+      color: #000;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* LANDING */
+    #landing {
+      position: fixed;
+      inset: 0;
+      background: #f3e7b3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      transition: opacity 0.6s ease;
+    }
+
+    #landing.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #landing h1 {
+      margin-bottom: 25px;
+      font-size: 2.2rem;
+      text-align: center;
+    }
+
+    #enterBtn {
+      padding: 18px 45px;
+      font-size: 1.3rem;
+      border-radius: 40px;
+      border: none;
+      background: #6b4f33;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    #enterBtn:hover {
+      background: #4e3824;
+      transform: scale(1.08);
+    }
+
+    /* MAIN */
+    main {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    main.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    header {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #84934A;
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      box-shadow: 0 12px 30px rgba(107,79,51,0.35);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      font-weight: 500;
+      color: #492828;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.6;
+      font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.1rem; }
+      header p { font-size: 1rem; }
+      .card { padding: 20px; }
+    }
+
+    @media (max-width: 480px) {
+      #landing h1 { font-size: 1.7rem; }
+      #enterBtn { padding: 15px 30px; font-size: 1.1rem; }
+      header { padding: 40px 15px; }
+      header h1 { font-size: 1.8rem; }
+      .card { border-radius: 12px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LANDING -->
+  <div id="landing">
+    <h1>Yusuf Taha ERİNMEZ</h1>
+    <button id="enterBtn">Hakkımda</button>
+  </div>
+
+  <!-- MAIN -->
+  <main>
+    <header>
+      <h1>Yusuf Taha ERİNMEZ</h1>
+      <p>SBTL Öğrencisi</p>
+    </header>
+
+    <section>
+      <div class="card">
+        <h2>Hakkımda</h2>
+        <p>
+          Merhaba, ben Yusuf Taha ERİNMEZ. 16.06.2009 yılında Sivas'ta doğdum.
+          Şu anda Sivas Bilişim Teknolojileri Mesleki ve Teknik Anadolu Lisesi'nde
+          11. sınıf öğrencisiyim.
+        </p>
+        <p>
+          Boyum 187 cm, kilom 81. Spor yapmayı seviyorum ve aktif bir yaşam tarzını benimsiyorum.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>İlgi Alanlarım</h2>
+        <ul>
+          <li>🎮 Oyun oynamak</li>
+          <li>🎵 Müzik dinlemek</li>
+          <li>🍳 Yemek yapmak</li>
+          <li>🏋️ Spor yapmak</li>
+          <li>🌳 Dışarıda vakit geçirmek</li>
+          <li>🎬 Dizi & film izlemek</li>
+          <li>💻 Yazılım ve teknoloji</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Hedefim</h2>
+        <p>YKS'de ilk 30.000’e girerek Yapay Zeka Mühendisliği kazanmak.</p>
+      </div>
+    </section>
+
+    <footer>
+      Yusuf Taha ERİNMEZ • Kişisel Tanıtım Sayfası
+    </footer>
+  </main>
+
+  <script>
+    // Landing geçişi
+    const enterBtn = document.getElementById("enterBtn");
+    const landing = document.getElementById("landing");
+    const main = document.querySelector("main");
+
+    enterBtn.addEventListener("click", () => {
+      landing.classList.add("hide");
+      main.classList.add("show");
+    });
+
+    // Scroll animasyonu
+    const cards = document.querySelectorAll(".card");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>
